@@ -1,0 +1,20 @@
+{
+  "name": "project_05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielacalderon10/Project_05.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danielacalderon10/Project_05/issues"
+  },
+  "homepage": "https://github.com/Danielacalderon10/Project_05#readme"
+}
