@@ -1,6 +1,6 @@
 console.log("it is connected")
 
-$("h1").css("color","#3949ab")
+$("h1").css("color","#673ab7")
 
 
 
@@ -11,13 +11,15 @@ $("h1").css("color","#3949ab")
 var proxy = 'https://cors-anywhere.herokuapp.com/'
 var url = 'https://www.metaweather.com/api/location/1103816/'
 
+
 //weather
+$("#weather").hide()
 $.ajax({
     
     method: "GET",
     url: proxy + url,
     success: (data) => {
-        $(".progress").hide();
+       
         // console.log(data);
     const {consolidated_weather: weather} = data;
 
@@ -31,7 +33,11 @@ const html =
 <p> <strong>${parseInt(weather[0].the_temp)} °C </strong> </p>
 <p> <strong>${weather[0].weather_state_name}</strong> </p>
 `
-    $("#weather").append(html)
+
+    $("#weather").append(html);
+
+    $(".progress").hide();
+    $("#weather").show();
     }
   })
 
