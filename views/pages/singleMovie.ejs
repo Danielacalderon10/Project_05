@@ -1,0 +1,23 @@
+
+<%- include('../partials/head.ejs') %>
+<body>
+ <%- include('../partials/nav.ejs') %>
+
+
+    <div class="container">
+     
+<h1 id = "title">  Movie page </h1>
+<h4 id = "year">  </h4>
+<div id = "poster"></div>
+<p id = "synopsis" ></p>
+  </div>
+
+       <!-- footer --> 
+  <%- include('../partials/footer.ejs') %>
+  <script> const movie_id = <%= movie_id %> </script>
+          <!-- Javascript -->     
+  <script src="/js/singleMovie.js"></script>
+  <script src="/js/apiConfig.js"></script>
+  
+</body>
+</html>

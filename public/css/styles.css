@@ -10,3 +10,16 @@ h1 {
    margin-left: 30%;
    margin-right: 30%;
 }
+.movie-container{
+height: 400px;
+
+}
+.movie-container img{
+min-height: 360px;
+transition: transform 0.8s;
+    
+}
+.movie-container img:hover {
+   transform: scale(1.1)
+        
+    }

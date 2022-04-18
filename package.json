@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e js,ejs,css index",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/Danielacalderon10/Project_05/issues"
   },
-  "homepage": "https://github.com/Danielacalderon10/Project_05#readme"
+  "homepage": "https://github.com/Danielacalderon10/Project_05#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "pg-promise": "^10.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

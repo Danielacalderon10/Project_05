@@ -41,30 +41,8 @@ const html =
     }
   })
 
-//movies
-let BASE_URL = "https://api.themoviedb.org/3/discover/movie"
-let IMAGE_URL ="https://image.tmdb.org/t/p/w500"
- let API_KEY ="?api_key=81ecf20e0f0edd8380a76ea525f2c026";
-//  https://api.themoviedb.org/3/discover/movie/550?api_key=81ecf20e0f0edd8380a76ea525f2c026
-//https://api.themoviedb.org/3/movie/550?api_key=81ecf20e0f0edd8380a76ea525f2c026
 
-$.getJSON(BASE_URL + API_KEY)
-.then((data) => {
-const {results} = data
-const {page} = data
-results.forEach((movie) => {
-    const html =
-    `
-    <div class = "col s12 m4 l3">
-    <h4 class= "truncate"> ${movie.title} </h4>
-    <img src="${IMAGE_URL}${movie.poster_path}" class ="responsive-img" alt= "Poster for ${movie.title}">
-    <div/>
-    `
-    $("#movies").append(html)
 
-})
-
-})
 .catch((err) => {
 console.log(err);
 })
