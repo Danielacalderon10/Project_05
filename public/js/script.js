@@ -3,13 +3,8 @@ console.log("it is connected")
 $("h1").css("color","#673ab7")
 
 
-
-
-// var myUrl = 'http://www.metaweather.com/api/location/1103816/';
-// var proxy = 'https://cors-anywhere.herokuapp.com/';
-
-var proxy = 'https://cors-anywhere.herokuapp.com/'
-var url = 'https://www.metaweather.com/api/location/1103816/'
+// var proxy = 'https://cors-anywhere.herokuapp.com/'
+// var url = 'https://www.metaweather.com/api/location/1103816/'
 
 
 //weather
@@ -17,14 +12,12 @@ $("#weather").hide()
 $.ajax({
     
     method: "GET",
-    url: proxy + url,
+    url:" http://localhost:3000/api/weather",
     success: (data) => {
-       
-        // console.log(data);
     const {consolidated_weather: weather} = data;
 
     console.log(data);
-const html =
+    $("#weather").append(
 `
 <div id ="icon">
 <img src="https://www.metaweather.com/static/img/weather/${weather[0].weather_state_abbr}.svg" alt= "">
@@ -33,9 +26,8 @@ const html =
 <p> <strong>${parseInt(weather[0].the_temp)} °C </strong> </p>
 <p> <strong>${weather[0].weather_state_name}</strong> </p>
 `
-
-    $("#weather").append(html);
-
+    )
+  
     $(".progress").hide();
     $("#weather").show();
     }

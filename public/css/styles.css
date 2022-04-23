@@ -1,5 +1,6 @@
 h1 {
-    color: blue;
+    color: #1a237e;
+    text-shadow: 2px 2px 2px rgb(158, 158, 158);
 }
 
 #weather {    
@@ -23,3 +24,36 @@ transition: transform 0.8s;
    transform: scale(1.1)
         
     }
+.title{
+    text-align: center;
+    align-items: center;
+   
+}
+    .part2 {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .box1{
+        height: 50%;
+        width: 100%;
+        margin: 5px;
+      
+      }
+      .box2{
+        height: 100%;
+        width: 60%;
+        margin: 5px;
+        margin-top: 20%;
+    
+     }
+    #comment-form{
+        margin: 5%;
+        padding: 5%;
+    }
+      
+   .brand-logo{
+    text-shadow: 1px 1px 1px rgb(158, 158, 158);
+   }
