@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js,ejs,css index",
-    "start": "node index"
+    "start": "node index",
+    "create_db": "psql -U postgres -f sql/create_db.sql",
+    "create_tables": "psql -U postgres -d movies -f sql/create_tables.sql",
+    "seed_tables": "psql -U postgres -d movies -f sql/seed_tables.sql"
+
   },
   "repository": {
     "type": "git",
