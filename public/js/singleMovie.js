@@ -1,6 +1,3 @@
-$(document).ready(function(){
-  $('select').formSelect();
-});
 
 let IMAGE_URL ="https://image.tmdb.org/t/p/w500"
 
@@ -19,3 +16,24 @@ $.getJSON("/api/singleMovie/" + movie_id)
   .catch((err) => {
     console.log(err)
   });
+
+  $("#comment-form").submit((e) => {
+    e.preventDefault();
+    $.post(`/movies/${movie_id}`, { comment: $("#comment").val() },  { score: $("#score").val() })
+      .then((response) => {
+        console.log(response);
+        const html =
+        `
+      <div>
+      <p><strong>${response.score}</strong></p>
+        <p><strong>${response.comment}</strong></p>
+        <p>${response.created_at}</p>
+      </div>
+        `
+        $("#comment-body").prepend(html)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+ 
