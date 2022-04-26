@@ -6,6 +6,7 @@
 
  <div class="container" id="movie-details">
      <h1 id = "title"> </h1>
+     
  <div class="part2">
       <div class=" box1">
         <div id = "poster"></div>
@@ -18,9 +19,9 @@
           <% if (typeof comments != 'undefined') { %>
               <% for (let i = 0; i < comments.length; i++) { %>
                 <div>
-                  <p><strong> <%= comments[i].score %> Stars</strong></p> 
-                  <!-- const mean = (([scores].reduce((a, b) => a + b, 0))/comments.length) %> 
-                  <p><strong><mean(comments[i].score) %> Stars</strong></p> -->
+                  <!-- <p><strong>  comments[i].score %> Stars</strong></p>  -->
+                  <% const mean = (([comments[i].score].reduce((a, b) => a + b, 0))/comments.length) %> 
+                  <p><strong> <%= mean %>  Stars  </strong></p> 
                 </div>
               <% } %>
             <% } %>
@@ -28,8 +29,8 @@
         
         <form id="comment-form" method="POST" action="/movies/<%= movie_id %> ">
           <div id ="comments">
-          <!-- <div class ="score">
-            <label for="score"> Score </label>
+          <div class ="score">
+           <!--  <label for="score"> Score </label>
             <select name="score" id="score" class="score" required>
               <option value = "" > movies score  </option>
               <option value = 1 > &#9733; &#9734; &#9734; &#9734; &#9734; </option>
@@ -40,7 +41,7 @@
             </select>
             </div><br> -->
             
-            <div class="input-field ">  
+          <div class="input-field ">  
               <input id="score" type="text" name="score" />
               <label class="active" for="score">Score the movie from 1 to 5</label>
              </div>
@@ -76,6 +77,7 @@
 
         </div>
       </div>
+      
 </div>
 
        <!-- footer --> 
