@@ -33,9 +33,6 @@ const homeRouter = require("./routes/home")
 app.use('/', homeRouter)
 const moviesRouter = require("./routes/movies")
 app.use('/movies', moviesRouter)
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
 
 
 // API routes

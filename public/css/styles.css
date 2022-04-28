@@ -3,6 +3,10 @@ h1 {
     text-shadow: 2px 2px 2px rgb(158, 158, 158);
 }
 
+.index {
+    color: #1a237e;
+    text-shadow: 2px 2px 2px rgb(158, 158, 158);
+}
 #weather {    
     width: 50%;
     
@@ -46,7 +50,12 @@ transition: transform 0.8s;
         height: 100%;
         width: 60%;
         margin: 5px;
-        margin-top: 20%;
+        margin-top: 10%;
+    
+     }
+     .box22{
+        
+      padding-top: 5%;
     
      }
     #comment-form{
@@ -58,3 +67,23 @@ transition: transform 0.8s;
     text-shadow: 1px 1px 1px rgb(158, 158, 158);
    }
 
+
+.stars{
+    color: #1a237e;
+    text-align: center;
+}
+.sub{
+    color: #1a237e;
+    text-align: center;
+    
+}
+.allcomments{
+    color: #1a237e;
+    padding: 4%;
+    text-align: center;
+}
+.pagination{
+  
+    align-items: center;
+    align-content: center;
+}

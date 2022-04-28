@@ -1,4 +1,8 @@
 
+$(document).ready(function () {
+  $("select").formSelect();
+});
+
 let IMAGE_URL ="https://image.tmdb.org/t/p/w500"
 
 $.getJSON("/api/singleMovie/" + movie_id)
@@ -19,21 +23,24 @@ $.getJSON("/api/singleMovie/" + movie_id)
 
   $("#comment-form").submit((e) => {
     e.preventDefault();
-    $.post(`/movies/${movie_id}`, { comment: $("#comment").val() },  { score: $("#score").val() })
+    $.post(`/movies/${movie_id}`, { comment: $("#comment").val(), score: $("#score").val() })
       .then((response) => {
         console.log(response);
         const html =
-        `
-      <div>
-      <p><strong>${response.score}</strong></p>
-        <p><strong>${response.comment}</strong></p>
-        <p>${response.created_at}</p>
-      </div>
-        `
-        $("#comment-body").prepend(html)
+    `
+  <div>
+  <br>
+  <p>Your comment was successfully submitted, Thanks for contributing with your opinion 
+  :</p>
+ <p><strong>Your Score: ${response.score}</strong></p>
+    <p><strong>${response.comment}</strong></p>
+    <br>
+   </div>
+     `
+ $("#comment-body").append(html)
       })
       .catch((error) => {
         console.log(error);
       });
   });
- 
+
