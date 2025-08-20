@@ -6,3 +6,4 @@ CREATE TABLE IF NOT EXISTS comments (
    movie_id INT NOT NULL,
    created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
